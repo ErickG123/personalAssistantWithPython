@@ -3,6 +3,7 @@ import sys
 import os
 
 from gtts import gTTS
+from datetime import datetime
 from playsound import playsound
 
 # Create the assistant's "voice"
@@ -45,6 +46,11 @@ def execute_command(message):
   # Close personal assistent (Hikari)
   if 'fechar hikari' in message:
     sys.exit()
+
+  # Get current hour
+  elif 'hikari' in message and 'horas' in message:
+    hour = datetime.now().strftime('%H:%M')
+    make_audio('hour.mp3', f'Agora são {hour}')
 
 # Main function
 def main():
