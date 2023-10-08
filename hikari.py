@@ -9,14 +9,13 @@ from playsound import playsound
 def make_audio(audio, message):
   tts = gTTS(message, lang='pt-br')
 
-  audios_director = os.path.join(os.getcwd() + '\\audios')
+  audios_director = os.path.join(os.getcwd() + '.\\audios')
   audio_path = os.path.join(audios_director, audio)
 
-  relative_audio_path = os.path.relpath(audio_path, os.getcwd()).replace("audios", ".\\audios")
+  relative_audio_path = os.path.relpath(audio_path, os.getcwd())
 
   tts.save(audio_path)
   playsound(relative_audio_path)
-
   os.remove(audio_path)
 
 # Check audio input
@@ -49,7 +48,7 @@ def execute_command(message):
 
 # Main function
 def main():
-  make_audio('ola.mp3', 'Olá sou a Hikari, sua assistente virtual! Como posso ajudar?')
+  make_audio('hello.mp3', 'Olá sou a Hikari, sua assistente virtual! Como posso ajudar?')
   
   while True:
     check_audio()
