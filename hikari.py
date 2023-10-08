@@ -1,8 +1,11 @@
 import speech_recognition as sr
+import webbrowser as browser
+import requests
 import sys
 import os
 
 from gtts import gTTS
+from bs4 import BeautifulSoup
 from datetime import datetime
 from playsound import playsound
 
@@ -51,6 +54,12 @@ def execute_command(message):
   elif 'hikari' in message and 'horas' in message:
     hour = datetime.now().strftime('%H:%M')
     make_audio('hour.mp3', f'Agora são {hour}')
+
+  # Search in youtube
+  elif 'hikari' in message and 'youtube' in message:
+    message = message.replace('hikari', '')
+    message = message.replace('youtube', '')
+    browser.open(f'https://youtube.com/results?search_query={message}')
 
 # Main function
 def main():
