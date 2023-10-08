@@ -10,6 +10,8 @@ A biblioteca SpeechRecognition é uma ferramenta Python que permite reconhecer f
 **Instalação:**
 `pip install SpeechRecognition`
 
+# Playsound
+
 # OS
 A biblioteca os fornece uma maneira de interagir com o sistema operacional, permitindo que você realize várias operações relacionadas a arquivos, diretórios e processos, além de acessar variáveis de ambiente.
 
@@ -24,3 +26,11 @@ A biblioteca platform permite que você obtenha informações sobre a plataforma
 A biblioteca subprocess é usada para criar, controlar e interagir com processos externos a partir do Python.
 
 **Instalação:** Faz parte da biblioteca padrão do Python, ou seja, quando instalamos o Python, ela já vem junto com a instalação.
+
+# Datetime
+
+# Webbrowser
+
+# Requests
+
+# BeautifulSoup
